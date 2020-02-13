@@ -97,6 +97,11 @@ class HttpClient
         }
     }
 
+    public function setHeader($header, $value)
+    {
+        $this->headers[] = $header . ': ' . $value;
+    }
+
     public function setUserAgent($value)
     {
         $this->setHeader('User-Agent', $value);
