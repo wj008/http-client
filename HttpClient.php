@@ -128,7 +128,7 @@ class HttpClient
         if ($this->checkStatus) {
             $status = $this->getStatus();
             if ($status >= 400 && $status <= 599) {
-                throw new HttpClientException($this->getStatusMessage(), $status, $this->getResponse());
+                throw new HttpClientException($this->getStatusMessage(), $status);
             }
         }
         if ($this->followLocation) {
